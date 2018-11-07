@@ -1,0 +1,702 @@
+{
+  "designerVersion" : "1.7.49",
+  "id" : "ActionButtonsParameter",
+  "name" : "ActionButtonsParameter",
+  "lastUpdate" : 1541604160499,
+  "rows" : [ [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "!task.id"
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "fc5030be-7d0a-4469-a488-a2c9c5ca4692",
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"SAVE\")<0"
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Save"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "primary"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Submit task"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "expression",
+          "value" : "submit.save()"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "860a0e15-400b-47b4-a8f3-565005b4cc6a",
+      "id" : "pbButton"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 6,
+        "lg" : 6
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "readOnly" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "required" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "minLength" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "maxLength" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Cancel Comments"
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        },
+        "value" : {
+          "type" : "variable",
+          "value" : ""
+        }
+      },
+      "reference" : "2f7d9c55-b071-4d25-9237-ffffb2ecc38b",
+      "id" : "pbTextarea"
+    }, {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 6,
+        "lg" : 6
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"CANCEL\")<0"
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Cancel"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "danger"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Submit task"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "expression",
+          "value" : "submit.cancel()"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "6e4e46fd-b1de-49a4-8f0d-b46f91610d6b",
+      "id" : "pbButton"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"ROLLBACK\")<0"
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Rollback"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "warning"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Submit task"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "expression",
+          "value" : "submit.rollback()"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "f15c903a-ac3e-4b10-b0f6-600aa3ea0276",
+      "id" : "pbButton"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"CONTINUE\")<0"
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Continue"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "success"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Submit task"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "expression",
+          "value" : "submit.continue()"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "bbcea19b-161c-4ac0-80b1-73043b8beed7",
+      "id" : "pbButton"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 6,
+        "lg" : 6
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "required" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Select"
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        },
+        "placeholder" : {
+          "type" : "interpolation",
+          "value" : "Select an option"
+        },
+        "availableValues" : {
+          "type" : "constant"
+        },
+        "displayedKey" : {
+          "type" : "constant"
+        },
+        "returnedKey" : {
+          "type" : "constant"
+        },
+        "value" : {
+          "type" : "variable",
+          "value" : ""
+        }
+      },
+      "reference" : "c42849a5-7166-4e77-9698-3f1c2c2342e4",
+      "id" : "pbSelect"
+    }, {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 6,
+        "lg" : 6
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Assign next task"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "info"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Submit task"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "constant"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "4bd68ad0-4299-4bf7-b95f-b27bf8de8cfe",
+      "id" : "pbButton"
+    } ] ]
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "task.id"
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "df792a0c-75c8-449f-90b1-107039f17d7a",
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"SAVE\")<0"
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Save"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "primary"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Start process"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "expression",
+          "value" : "submit.save()"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "d48113de-3480-4bc9-89f2-4f1959d3c8cd",
+      "id" : "pbButton"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"NEW\")<0"
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "New"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "success"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Start process"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "expression",
+          "value" : "submit.continue()"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "d407708e-fe69-48bb-bbc7-86b031cb611f",
+      "id" : "pbButton"
+    } ] ]
+  } ] ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "contract" : {
+      "type" : "constant",
+      "exposed" : true
+    },
+    "submit" : {
+      "type" : "expression",
+      "value" : "return {\n    \"save\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"SAVE\";\n        return contract;\n    },\n    \"rollback\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"ROLLBACK\";\n        return contract;\n    },\n    \"cancel\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"CANCEL\";\n        return contract;\n    },\n    \"continue\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"CONTINUE\";\n        return contract;\n    }\n}",
+      "exposed" : false
+    },
+    "availableActions" : {
+      "type" : "url",
+      "value" : "../API/bpm/processParameter/{{processId}}/{{paramName}}",
+      "exposed" : false
+    },
+    "processId" : {
+      "type" : "constant",
+      "exposed" : true
+    },
+    "task" : {
+      "type" : "constant",
+      "exposed" : true
+    },
+    "paramName" : {
+      "type" : "expression",
+      "value" : "if($data.task && $data.task.id){\n    return \"actions\"+$data.task.name\n}else{\n    return \"actionsInstantiation\"\n}",
+      "exposed" : false
+    }
+  },
+  "type" : "fragment"
+}

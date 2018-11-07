@@ -1,0 +1,83 @@
+{
+  "designerVersion" : "1.7.49",
+  "id" : "newCase",
+  "name" : "newCase",
+  "lastUpdate" : 1541601884626,
+  "rows" : [ [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : { },
+    "reference" : "731b1e0d-b21a-4e56-abc8-4261fab9bc54",
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "6f3db9e4-3352-4335-9954-3734bb51f454",
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "5c868b2f-c519-46a0-9518-fae890ddf23f",
+        "id" : "ActionButtonsParameter",
+        "binding" : {
+          "contract" : "formInput",
+          "processId" : "processId",
+          "task" : ""
+        }
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "252a7d7b-3581-469c-8335-b5d9578f7678",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "b7f5d618-82a7-4b53-9575-9fc2715266b8",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"c_action\" : \"\"\r\n}",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : "return {\n\t'c_action': $data.formInput.c_action\n};",
+      "exposed" : false
+    },
+    "processId" : {
+      "type" : "urlparameter",
+      "value" : "id",
+      "exposed" : false
+    }
+  },
+  "uuid" : "e4b927ea-7e32-422f-a8f3-5bc667496960",
+  "type" : "form"
+}
