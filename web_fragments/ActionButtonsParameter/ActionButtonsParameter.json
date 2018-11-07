@@ -2,7 +2,7 @@
   "designerVersion" : "1.7.49",
   "id" : "ActionButtonsParameter",
   "name" : "ActionButtonsParameter",
-  "lastUpdate" : 1541604160499,
+  "lastUpdate" : 1541608473184,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -112,8 +112,8 @@
           "value" : ""
         },
         "hidden" : {
-          "type" : "constant",
-          "value" : false
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"CANCEL\")<0"
         },
         "readOnly" : {
           "type" : "constant",
@@ -149,7 +149,7 @@
         },
         "value" : {
           "type" : "variable",
-          "value" : ""
+          "value" : "comments"
         }
       },
       "reference" : "2f7d9c55-b071-4d25-9237-ffffb2ecc38b",
@@ -172,8 +172,8 @@
           "value" : "availableActions.value.indexOf(\"CANCEL\")<0"
         },
         "disabled" : {
-          "type" : "constant",
-          "value" : false
+          "type" : "expression",
+          "value" : "!comments"
         },
         "label" : {
           "type" : "interpolation",
@@ -381,8 +381,8 @@
           "value" : ""
         },
         "hidden" : {
-          "type" : "constant",
-          "value" : false
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"ASSIGN\")<0"
         },
         "disabled" : {
           "type" : "constant",
@@ -413,17 +413,20 @@
           "value" : "Select an option"
         },
         "availableValues" : {
-          "type" : "constant"
+          "type" : "expression",
+          "value" : "usersOfActor"
         },
         "displayedKey" : {
-          "type" : "constant"
+          "type" : "constant",
+          "value" : "username"
         },
         "returnedKey" : {
-          "type" : "constant"
+          "type" : "constant",
+          "value" : "id"
         },
         "value" : {
           "type" : "variable",
-          "value" : ""
+          "value" : "assigned"
         }
       },
       "reference" : "c42849a5-7166-4e77-9698-3f1c2c2342e4",
@@ -442,12 +445,12 @@
           "value" : ""
         },
         "hidden" : {
-          "type" : "constant",
-          "value" : false
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"ASSIGN\")<0"
         },
         "disabled" : {
-          "type" : "constant",
-          "value" : false
+          "type" : "expression",
+          "value" : "!assigned"
         },
         "label" : {
           "type" : "interpolation",
@@ -469,7 +472,8 @@
           "type" : "interpolation"
         },
         "dataToSend" : {
-          "type" : "constant"
+          "type" : "expression",
+          "value" : "submit.assign()"
         },
         "dataFromSuccess" : {
           "type" : "variable",
@@ -665,6 +669,141 @@
       },
       "reference" : "d407708e-fe69-48bb-bbc7-86b031cb611f",
       "id" : "pbButton"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 6,
+        "lg" : 6
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"ASSIGN\")<0"
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "required" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Select"
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        },
+        "placeholder" : {
+          "type" : "interpolation",
+          "value" : "Select an option"
+        },
+        "availableValues" : {
+          "type" : "expression",
+          "value" : "usersOfActor"
+        },
+        "displayedKey" : {
+          "type" : "constant",
+          "value" : "username"
+        },
+        "returnedKey" : {
+          "type" : "constant",
+          "value" : "id"
+        },
+        "value" : {
+          "type" : "variable",
+          "value" : "assigned"
+        }
+      },
+      "reference" : "d8460ec7-f931-45c5-8502-3de848907d35",
+      "id" : "pbSelect"
+    }, {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 6,
+        "lg" : 6
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "availableActions.value.indexOf(\"ASSIGN\")<0"
+        },
+        "disabled" : {
+          "type" : "expression",
+          "value" : "!assigned"
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Assign next task"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "info"
+        },
+        "action" : {
+          "type" : "constant",
+          "value" : "Start process"
+        },
+        "url" : {
+          "type" : "interpolation"
+        },
+        "dataToSend" : {
+          "type" : "expression",
+          "value" : "submit.assign()"
+        },
+        "dataFromSuccess" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "dataFromError" : {
+          "type" : "variable",
+          "value" : ""
+        },
+        "targetUrlOnSuccess" : {
+          "type" : "interpolation"
+        },
+        "collectionToModify" : {
+          "type" : "variable"
+        },
+        "collectionPosition" : {
+          "type" : "constant",
+          "value" : "Last"
+        },
+        "valueToAdd" : {
+          "type" : "constant"
+        },
+        "removeItem" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "99b4e4ea-c8c3-42e8-88ac-2b37dee7acce",
+      "id" : "pbButton"
     } ] ]
   } ] ],
   "assets" : [ ],
@@ -676,7 +815,7 @@
     },
     "submit" : {
       "type" : "expression",
-      "value" : "return {\n    \"save\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"SAVE\";\n        return contract;\n    },\n    \"rollback\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"ROLLBACK\";\n        return contract;\n    },\n    \"cancel\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"CANCEL\";\n        return contract;\n    },\n    \"continue\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"CONTINUE\";\n        return contract;\n    }\n}",
+      "value" : "return {\n    \"save\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"SAVE\";\n        contract.c_cancelComments = \"\";\n        contract.c_assigned = \"0\";\n        return contract;\n    },\n    \"rollback\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"ROLLBACK\";\n        contract.c_cancelComments = \"\";\n        contract.c_assigned = \"0\";\n        return contract;\n    },\n    \"cancel\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"CANCEL\";\n        contract.c_cancelComments = $data.comments;\n        contract.c_assigned = \"0\";\n        return contract;\n    },\n    \"continue\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"CONTINUE\";\n        contract.c_cancelComments = \"\";\n        contract.c_assigned = \"0\";\n        return contract;\n    },\n    \"assign\":function(){\n        var contract = angular.copy($data.contract);\n        contract.c_action = \"ASSIGN\";\n        contract.c_cancelComments = \"\";\n        contract.c_assigned = $data.assigned;\n        return contract;\n    }\n}",
       "exposed" : false
     },
     "availableActions" : {
@@ -695,6 +834,24 @@
     "paramName" : {
       "type" : "expression",
       "value" : "if($data.task && $data.task.id){\n    return \"actions\"+$data.task.name\n}else{\n    return \"actionsInstantiation\"\n}",
+      "exposed" : false
+    },
+    "assigned" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "comments" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "usersOfActor" : {
+      "type" : "url",
+      "value" : "../API/extension/usersOfActor?actor={{actor}}&processId={{processId}}",
+      "exposed" : false
+    },
+    "actor" : {
+      "type" : "expression",
+      "value" : "if($data.task && $data.task.name){\n    if(\"complete\" === $data.task.name){\n        return \"Actor1\"\n    }else{\n        var currentActorNum = Number($data.task.name.substring(5))+1;\n        return \"Actor\"+currentActorNum\n    }\n}else{\n    return \"Actor1\"\n}",
       "exposed" : false
     }
   },

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>assignToOneOrToAll</id>
+  <version>1.0.0</version>
+  <category icon="process.gif" id="process"/>
+  <input name="userToAssign" type="java.lang.Long"/>
+  <page id="AssignToUser">
+    <widget xsi:type="definition:Text" id="AssignToUser" inputName="userToAssign"/>
+  </page>
+</definition:ConnectorDefinition>
