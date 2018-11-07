@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel modelVersion="1.0" productVersion="7.7.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.ca.model.Audits">
+            <fields>
+                <field type="LOCALDATETIME" length="255" name="dateModification" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="userModification" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="taskId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="statusCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="actionName" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

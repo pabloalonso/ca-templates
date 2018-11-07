@@ -1,0 +1,59 @@
+{
+  "designerVersion" : "1.7.49",
+  "id" : "TestForm",
+  "name" : "TestForm",
+  "lastUpdate" : 1541598709960,
+  "rows" : [ [ {
+    "type" : "fragment",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "ae1072a3-2c10-46b1-aae4-0c9c53cfb017",
+    "id" : "ActionButtons",
+    "binding" : {
+      "contract" : "formInput",
+      "taskId" : "taskId"
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "0a7be9c5-dfb7-4091-9f39-2fc719fa6bce",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "c6843a22-5398-49b0-b940-1d0589a2ea00",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : "{}",
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : "id",
+      "exposed" : false
+    }
+  },
+  "uuid" : "a0d7a9ce-3a64-4ca2-b275-e82f57faf417",
+  "type" : "form"
+}
